@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>无缝滚动</title>
+    <link rel="stylesheet" href="./css/liMarquee.css">
+    <script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.liMarquee.js"></script>
+    <style>
+        * {
+            font: 1.2em sans-serif;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .demo li {
+            float: left;
+            padding: 20px;
+        }
+
+        .demo3,
+        .demo4,
+        .demo5,
+        .demo6 {
+            width: 300px;
+            height: 100px;
+        }
+
+        .left,
+        .right {
+            display: inline-block;
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>默认效果</h1>
+    <ul class="demo">
+        <li>默认效果是向左滚动</li>
+        <li>不传递参数</li>
+        <li>默认效果是向左滚动</li>
+        <li>默认效果是向左滚动</li>
+        <li>默认效果是向左滚动</li>
+    </ul>
+
+    <h1>向右滚动</h1>
+    <div class="demo2">
+        <a>向右滚动</a>
+        <a>传递一个</a>
+        <a>参数对象</a>
+        <a>direction：right</a>
+        <a>向右滚动</a>
+    </div>
+    <div class="left">
+        <h1>向上滚动</h1>
+        <div class="demo3">
+            <ul>
+                <li>向上滚动</li>
+                <li>传递一个</li>
+                <li>参数对象</li>
+                <li>direction：up</li>
+                <li>向上滚动</li>
+            </ul>
+        </div>
+
+        <h1>向下滚动</h1>
+        <div class="demo4">
+            <ul>
+                <li>向下滚动</li>
+                <li>传递一个</li>
+                <li>参数对象</li>
+                <li>direction：down</li>
+                <li>向下滚动</li>
+            </ul>
+        </div>
+    </div>
+    <div class="right">
+        <h1>向上滚动 速度值20</h1>
+        <div class="demo5">
+            <ul>
+                <li>向上滚动</li>
+                <li>传递一个</li>
+                <li>参数对象</li>
+                <li>direction：up</li>
+                <li>向上滚动</li>
+            </ul>
+        </div>
+
+        <h1>向下滚动 速度值200</h1>
+        <div class="demo6">
+            <ul>
+                <li>向下滚动</li>
+                <li>传递一个</li>
+                <li>参数对象</li>
+                <li>direction：down</li>
+                <li>向下滚动</li>
+            </ul>
+        </div>
+    </div>
+
+    <h1>图片演示</h1>
+
+<div class="demo7">
+    <img src="images/1.jpg" alt="">
+    <img src="images/1.jpg" alt="">
+    <img src="images/1.jpg" alt="">
+    <img src="images/1.jpg" alt="">
+    <img src="images/1.jpg" alt="">
+    <img src="images/1.jpg" alt="">
+    <img src="images/1.jpg" alt="">
+    <img src="images/1.jpg" alt="">
+    <img src="images/1.jpg" alt="">
+</div>
+
+
+    <script>
+        $(function () {
+            //不传参数是默认效果
+            $('.demo').liMarquee();
+
+            //传入一个对象参数 向右滚动
+            $('.demo2').liMarquee({
+                direction: 'right'
+            });
+
+            //传入一个对象参数 向上滚动
+            $('.demo3').liMarquee({
+                direction: 'up'
+            });
+
+            //传入一个对象参数 向下滚动
+            $('.demo4').liMarquee({
+                direction: 'down'
+            });
+
+
+            //传入一个对象参数 向上滚动+滚动速度
+            $('.demo5').liMarquee({
+                direction: 'up',
+                //滚动速度 值越大滚动越快
+                scrollamount: 20
+            });
+
+            //传入一个对象参数 向下滚动+滚动速度
+            $('.demo6').liMarquee({
+                direction: 'down',
+                //滚动速度 值越大滚动越快
+                scrollamount: 200
+            });
+
+            
+            //传入一个对象参数 向下滚动+滚动速度
+            $('.demo7').liMarquee();
+        })
+    </script>
+</body>
+
+</html>
